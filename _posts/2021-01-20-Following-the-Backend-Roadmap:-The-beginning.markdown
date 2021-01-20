@@ -3,22 +3,14 @@ layout: post
 title:  "Following the backend roadmap: the beginning."
 date:   2021-01-20 16:40:00
 categories: engineering
+
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+I always envisioned myself being a software engineer, yet I never had a chance to really sit down, and focus on studying what needed to be learnt to become a competent engineer. Meanwhile, I came across this website: [roadmap.sh](http://roadmap.sh) that provides a curriculum-like style roadmap to build the fundamental skillsets to become an engineer in various fields such as Frontend, Backend, etc.
 
-Jekyll also offers powerful support for code snippets:
+Thus, I decided to follow the [Backend-Engineer roadmap](https://roadmap.sh/backend) from ground zero, and aim to finish learning everything on this list in the upcoming months. Of course, I will be doing college work/Leetcoding/Projects on the side as well.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+So, welcome aboard on my journey to Full Stack Dev!
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+Hopefully you guys use this series of post usefully in preparing for your own careers.
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
