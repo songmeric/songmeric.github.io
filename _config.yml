@@ -12,8 +12,8 @@ google_analytics: "UA-XXXXXXXX-X"
 plugins: [jekyll-paginate]
 
 # Details for the RSS feed generator
-url: ""
-author: "Your Name"
+url: "http://songmeric.github.io"
+author: "Meric Song"
 
 # Disqus config
 disqus-shortname: ""
