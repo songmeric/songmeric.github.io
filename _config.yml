@@ -1,6 +1,6 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: mericsong
+description: A London based Full Stack Engineer.
+meta_description: "mericsong"
 
 markdown: kramdown
 highlighter: rouge
