@@ -12,5 +12,5 @@ Thus, I decided to follow the [Backend-Engineer roadmap](https://roadmap.sh/back
 
 So, welcome aboard on my journey to Full Stack Dev!
 
-Hopefully you guys use this series of post usefully in preparing for your own careers.
+Hopefully you guys take a good advantage of this series of posts for your own sake of career development.
 
