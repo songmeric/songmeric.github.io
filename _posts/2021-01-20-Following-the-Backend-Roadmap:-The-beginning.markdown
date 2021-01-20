@@ -6,6 +6,8 @@ categories: engineering
 
 ---
 
+<br>
+
 I always envisioned myself being a software engineer, yet I never had a chance to really sit down, and focus on studying what needed to be learnt to become a competent engineer. Meanwhile, I came across this website: [roadmap.sh](http://roadmap.sh) that provides a curriculum-like style roadmap to build the fundamental skillsets to become an engineer in various fields such as Frontend, Backend, etc.
 
 Thus, I decided to follow the [Backend-Engineer roadmap](https://roadmap.sh/backend) from ground zero, and aim to finish learning everything on this list in the upcoming months. Of course, I will be doing college work/Leetcoding/Projects on the side as well.
