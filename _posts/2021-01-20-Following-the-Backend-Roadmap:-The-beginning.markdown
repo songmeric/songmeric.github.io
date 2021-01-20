@@ -2,7 +2,7 @@
 layout: post
 title:  "Following the backend roadmap: the beginning."
 date:   2021-01-20 16:40:00
-categories: Backend
+categories: engineering
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
