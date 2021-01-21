@@ -13,7 +13,7 @@ It is a **differential** amplifier, which means that the output voltage is
 **proportional** to the **difference between the input voltages**:
 
  {% raw %}
-  $$a^2 + b^2 = c^2$$ --> note that all equations between these tags will not need escaping! 
+  $$Y = A(V_{+} - V_{-})$$
  {% endraw %}
 
 
