@@ -34,8 +34,8 @@ about: 'about.html'
     <div class="extra-pagination inner">
         {% include pagination.html %}
     </div>
-<header class="post-header">Analysis and design of circuits</header>
-    <br><br>
+    <center><h4>Analysis and design of circuits</h4></center>
+    <br>
     {% for post in site.categories.ADC %}
 
     <article class="post">
@@ -60,6 +60,8 @@ about: 'about.html'
     </article>
 
     {% endfor %}
+    <br>
+    <center><p> --------------------------------------------------------- </p></center>
     <center><h4>Software Engineering Journey</h4></center>
     <br>
     {% for post in site.categories.engineering-roadmap %}
@@ -86,6 +88,7 @@ about: 'about.html'
     </article>
 
     {% endfor %} 
+    <br>
 
     {% include pagination.html %}
 
