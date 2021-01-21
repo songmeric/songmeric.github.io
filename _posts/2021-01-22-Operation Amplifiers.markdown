@@ -12,7 +12,9 @@ It is a **differential** amplifier, which means that the output voltage is
 
 **proportional** to the **difference between the input voltages**:
 
-\[Y = A(V_{+} - V_{-})]\
+ {% raw %}
+  $$a^2 + b^2 = c^2$$ --> note that all equations between these tags will not need escaping! 
+ {% endraw %}
 
 
 The gain, *A* is usually very large at low frequencies: e.g. *A = 10^5* 
