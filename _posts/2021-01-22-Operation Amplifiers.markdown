@@ -2,7 +2,7 @@
 layout: post
 title:  "Lecture 9: Operation Amplifiers"
 date:   2021-01-22 01:42
-categories: Analysis-and-design-of-circuit
+categories: ADC
 
 ---
 
