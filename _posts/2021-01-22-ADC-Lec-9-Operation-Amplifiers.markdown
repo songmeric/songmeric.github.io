@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Lecture 9: Operation Amplifiers"
+date:   2021-01-22 01:42
+categories: Analysis-and-design-of-circuit
+
+---
+
 An op-amp is a circuit with two inputs and one output. 
 
 It is a **differential** amplifier, which means that the output voltage is 
