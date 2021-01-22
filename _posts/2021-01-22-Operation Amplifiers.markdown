@@ -73,6 +73,8 @@ Applying steps 1 to 3:
 2. \\(V_{-} = V_{+} = X\\)
 3. Zero input current at \\(V_{-}\\) means \\(R_{2}\\) and \\(R_{1}\\) are in series and form a voltage divider
 
-So \\(X = \\frac{R_{1}}{R_{1}+R_{2}} Y \\). Hence,
+So \\(X = \\frac{R_{1}}{R_{1}+R_{2}} Y \\). 
+
+Hence,
 
 \\[Y = \\frac{R_1 + R_2}{R_1} X = (1+\\frac{R_2}{R_1})X = +4X \\]
