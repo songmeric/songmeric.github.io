@@ -17,7 +17,7 @@ It is a **differential** amplifier, which means that the output voltage is
 
 The gain, *A* is usually very large at low frequencies: e.g. *A = 10^5* 
 
-The input currents are very small: e.g. +- 1 nA.
+The input currents are very small: e.g. \\(\\pm 1 nA\\).
 
 Internally it is a complicated circuit , but we can forget about that for now, and treat it as an **almost perfect dependent voltage source.** 
 
