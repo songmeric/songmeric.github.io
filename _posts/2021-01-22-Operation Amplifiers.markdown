@@ -6,6 +6,8 @@ categories: ADC
 
 ---
 
+<h1>ADC Lecture 9 - Operational Amplifiers</h1>
+
 An op-amp is a circuit with two inputs and one output. 
 
 It is a **differential** amplifier, which means that the output voltage is 
@@ -13,6 +15,7 @@ It is a **differential** amplifier, which means that the output voltage is
 **proportional** to the **difference between the input voltages**:
 
 \\[Y = A(V_{+} - V_{-})\\]
+
 
 
 The gain, *A* is usually very large at low frequencies: e.g. \\(A = 10^5\\)
@@ -37,13 +40,11 @@ In the circuit shown, if the op-amp output Y falls, then \\(V_{-}\\) will fall b
 
 \\[Y = A(V_{+} - V_{-})\\] \\[Y = A(X-Y)\\]
 
-\\[Y(1+A) = AX => Y = \\frac{A}{A+1} \\approx X\\] <center>for large A.</center>
+\\[Y(1+A) = AX => Y = \\frac{A}{A+1} \\approx X\\] for large A.
 
-![Negative Feedback](/Imperial/ADC/Lec9_1.PNG) 
+![Negative Feedback](/Imperial/ADC/Lec9_1.png) 
 
 Golden Rule : **Negative feedback adjusts the output to make** \\(V_{+} \\approx V_{-}\\)
-
-
 
 
 
@@ -79,8 +80,60 @@ Hence,
 
 \\[Y = \\frac{R_1 + R_2}{R_1} X = (1+\\frac{R_2}{R_1})X = +4X \\]
 
+
+
 **Non-inverting amplifier** because the gain \\(\\frac{Y}{X}\\) is positive.
 
 Consequence of X being connected to \\(V_+\\) input.
 
 ![noninv](/Imperial/ADC/Lec9_NonInv.PNG)
+
+- It can have any gain \\(\\geqq\\) 1 by choosing the ratio \\(\\frac{R_2}{R_1}\\) 
+- Cause/effect reversal: Potential divider causes \\(V_{-} = \\frac{1}{4} Y \\)
+  - Feedback inverts this so that \\(Y = 4V_{+}\\)
+
+
+
+
+
+<h4>Voltage Follower</h4>
+
+A special case of the non-inverting amplifier with \\(R_1 = \\infty\\) and/or \\(R_2 =0\\).
+
+Gain is \\(1 + \\frac{R_2}{R_1} = 1\\) .
+
+Output Y "follows" intput X.
+
+![3](/Imperial/ADC/Lec9_3.PNG)
+
+Advantage: Can supply a large current at Y while drawing almost no current from X. Useful if the source supplying X has a high resistance.
+
+![4](/Imperial/ADC/Lec9_4.PNG)
+
+Although voltage gain is only 1, the power gain is much larger.
+
+
+
+
+
+<h4>Inverting Amplifier</h4>
+
+![5](/Imperial/ADC/Lec9_5.PNG)
+
+- Negative feedback OK
+- Since \\(V_+ = 0\\) we much have \\(V_- = 0\\). 
+- KCL at \\(V_-\\) node: \\(\\frac{0-X}{R_1} + \\frac{0-Y}{R_2} = 0 \\Rightarrow Y = -\\frac{R_2}{R_1}X = -3X\\)
+
+**"Inverting Amplifier"** because gain \\(\\frac{Y}{X}\\) is negative. Consequence of X being connected to the \\(V_-\\) Input(via \\(R_1\\)).
+
+Can have any gain =< 0 by choosing the ratio \\(\\frac{R_2}{R_1}\\).
+
+Negative feedback holds \\(V_-\\) very close to \\(V_+\\).
+
+If \\(V_+\\) = 0V, then \\(V_-\\) is called a **virtual earth** or **virtual ground**.
+
+Nodal Analysis: Do KCL at \\(V_+\\) and/or \\(V_-\\) to solve circuit. When analysing a circuit, you never do KCL at the output node of an opamp because its output current is unknown. The only exception is if you have already solved the circuit and you want to find out what the op amp output current is.(e.g to check it is not too high).
+
+
+
+
