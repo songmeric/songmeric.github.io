@@ -15,7 +15,7 @@ It is a **differential** amplifier, which means that the output voltage is
 \\[Y = A(V_{+} - V_{-})\\]
 
 
-The gain, *A* is usually very large at low frequencies: e.g. *A = 10^5* 
+The gain, *A* is usually very large at low frequencies: e.g. \\(A = 10^5\\)
 
 The input currents are very small: e.g. \\(\\pm 1 nA\\).
 
