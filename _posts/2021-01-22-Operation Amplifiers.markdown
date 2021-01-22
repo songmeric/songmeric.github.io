@@ -45,6 +45,8 @@ Golden Rule : **Negative feedback adjusts the output to make** \\(V_{+} \\approx
 
 
 
+
+
 <h4>Analysing Op-amp Circuits</h4>
 
 Nodal analysis is simplified by making some assumptions.
@@ -53,4 +55,24 @@ Nodal analysis is simplified by making some assumptions.
 
 1. Check for negative feedback: to ensure that an increase in Y makes \\(V_{+} - V_{-}\\) decrease, Y must be connected (usually via other components) to \\(V_{-}\\).
 2. Assume \\(V_{+} = V_{-}\\): Since \\((V_{+} - V_{-}) = \\frac{Y}{A}\\), this is the same as assuming that \\(A \\rightarrow \\infty \\).
+3. Assume zero input current: in most circuits, the current at the op-amp input terminals is much smaller than the other currents in the circuit, so we assume it is zero.
+4. Apply KCL at each op-amp input node separately(input currents = 0)
+5. **Do NOT apply KCL at output node** (output current is unknown). 
 
+
+
+
+
+<h4>Non-inverting Amplifier</h4>
+
+Circuit has input voltage X and output voltage Y. The circuit gain = \\(\\frac{Y}{X}\\)
+
+Applying steps 1 to 3:
+
+1. Negative feedback OK
+2. \\(V_{-} = V_{+} = X\\)
+3. Zero input current at \\(V_{-}\\) means \\(R_{2}\\) and \\(R_{1}\\) are in series and form a voltage divider
+
+So \\(X = \\frac{R_{1}}{R_{1}+R_{2}} Y \\). Hence,
+
+\\[Y = \\frac{R_1 + R_2}{R_1} X = (1+\\frac{R_2}{R_1})X = +4X \\]
