@@ -78,3 +78,5 @@ So \\(X = \\frac{R_{1}}{R_{1}+R_{2}} Y \\).
 Hence,
 
 \\[Y = \\frac{R_1 + R_2}{R_1} X = (1+\\frac{R_2}{R_1})X = +4X \\]
+
+![noninv](/Imperial/ADC/Lec9_NonInv.PNG)
