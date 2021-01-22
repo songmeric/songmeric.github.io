@@ -42,5 +42,5 @@ In the circuit shown, if the op-amp output Y falls, then \\(V_{-}\\) will fall b
 
 \\[Y = A(V_{+} - V_{-}) \n Y = A(X-Y)\\]
 
-![Negative Feedback](Imperial/ADC/Lec9_1.png) 
+![Negative Feedback](/Imperial/ADC/Lec9_1.PNG) 
 
