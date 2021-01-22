@@ -79,4 +79,8 @@ Hence,
 
 \\[Y = \\frac{R_1 + R_2}{R_1} X = (1+\\frac{R_2}{R_1})X = +4X \\]
 
+**Non-inverting amplifier** because the gain \\(\\frac{Y}{X}\\) is positive.
+
+Consequence of X being connected to \\(V_+) input.
+
 ![noninv](/Imperial/ADC/Lec9_NonInv.PNG)
