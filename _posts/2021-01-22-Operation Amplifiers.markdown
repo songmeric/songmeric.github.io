@@ -5,7 +5,6 @@ date:   2021-01-22 01:42
 categories: ADC
 
 ---
-
 <h1>ADC Lecture 9 - Operational Amplifiers</h1>
 
 An op-amp is a circuit with two inputs and one output. 
@@ -42,7 +41,7 @@ In the circuit shown, if the op-amp output Y falls, then \\(V_{-}\\) will fall b
 
 \\[Y(1+A) = AX => Y = \\frac{A}{A+1} \\approx X\\] for large A.
 
-![Negative Feedback](/Imperial/ADC/Lec9_1.PNG) 
+![Negative Feedback](/Imperial/ADC/Lec9_1.png) 
 
 Golden Rule : **Negative feedback adjusts the output to make** \\(V_{+} \\approx V_{-}\\)
 
@@ -108,7 +107,7 @@ Output Y "follows" intput X.
 
 Advantage: Can supply a large current at Y while drawing almost no current from X. Useful if the source supplying X has a high resistance.
 
-![4](/Imperial/ADC/Lec9_4.png)
+![4](/Imperial/ADC/Lec9_4.PNG)
 
 Although voltage gain is only 1, the power gain is much larger.
 
@@ -136,4 +135,20 @@ Nodal Analysis: Do KCL at \\(V_+\\) and/or \\(V_-\\) to solve circuit. When anal
 
 
 
+<h4>Inverting Summing Amplifier</h4>
 
+We can connect several input signals to the inverting amplifier.
+
+As before \\(V_- = 0\\) is a virtual ground due to negative feedback and \\(V_+ =0\\).
+
+![6](/Imperial/ADC/Lec9_6.PNG)
+
+KCL at \\(V_-\\) node: \\(\\frac{0-X_1}{R_1} + \\frac{0-X_2}{R_2} + \\frac{0-X_3}{R_3} + \\frac{0-Y}{R_F} = 0\\) 
+
+\\(\\Rightarrow Y = - (\\frac{R_F}{R_1}X_1 + \\frac{R_F}{R_2}X_2 + \\frac{R_F}{R_3}X_3)\\)
+
+\\(\\Rightarrow Y = -(8X_1 + 4X_2 + 4X_3))
+
+Y is a weighted sum of the input voltages with the weight of \\(X_i\\) equal to \\(\\frac{R_F}{R_i} = -G_{i}R_{F}\\).
+
+**Input Isolation**: The current through \\(R_1\\) equals \\(\\frac{X_1 - 0}{R_1}\\) which is not affected by \\(X_2\\) or \\(X_3\\). Because \\(V_-\\) is held at a fixed voltage, the inputs are isolated from each other.
