@@ -12,16 +12,28 @@ It is a **differential** amplifier, which means that the output voltage is
 
 **proportional** to the **difference between the input voltages**:
 
-{% raw %}
-  $$Y = A(V_{+} - V_{-})$$
-{% endraw %}
+ {% raw %}
+	$$Y = A(V_{+} - V_{-})$$
+ {% endraw %}
+
 
 
 The gain, *A* is usually very large at low frequencies: e.g. *A = 10^5* 
 
 The input currents are very small: e.g. +- 1 nA.
 
-Internally it is a complicated circuit with, but we can forget about that for now, and treat it as an **almost perfect dependent voltage source.** 
+Internally it is a complicated circuit , but we can forget about that for now, and treat it as an **almost perfect dependent voltage source.** 
 
-Most Op-Amps 
+Most Op-Amps are packaged in DIL (dual in-line) or surface mount packages. The image shows a very common pin-out for individually packaged op-amps.
 
+
+
+<h3>Negative Feedback</h3>
+
+**Negative feedback** is when the occurrence of an event causes something to happen that counteracts the original event.
+
+For example: in a central heating system, if the temperature falls too low the thermostat turns the heating on; when the temperature rises above a certain threshold the thermostat turns the heating off again.
+
+Negative feedback is employed in most op-amp circuits.
+
+In the circuit shown, if the op-amp output Y falls, then \(V_{-}) will fall by the same amount
