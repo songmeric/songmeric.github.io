@@ -107,7 +107,7 @@ Output Y "follows" intput X.
 
 Advantage: Can supply a large current at Y while drawing almost no current from X. Useful if the source supplying X has a high resistance.
 
-![4](/Imperial/ADC/Lec9_4.PNG)
+![4](/Imperial/ADC/Lec9_4.png)
 
 Although voltage gain is only 1, the power gain is much larger.
 
