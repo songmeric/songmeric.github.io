@@ -5,7 +5,7 @@ meta_description: "mericsong"
 markdown: kramdown
 highlighter: rouge
 logo: false
-paginate: 15
+paginate: 5
 baseurl: ""
 domain_name: "http://songmeric.github.io"
 google_analytics: "UA-XXXXXXXX-X"
