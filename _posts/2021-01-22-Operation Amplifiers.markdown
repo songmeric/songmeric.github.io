@@ -37,7 +37,7 @@ In the circuit shown, if the op-amp output Y falls, then \\(V_{-}\\) will fall b
 
 \\[Y = A(V_{+} - V_{-}) \\\ Y = A(X-Y)\\]
 
-\\[Y(1+A) = AX => Y = \\frac{1}{1+\\frac{1}{A}} -> X for large A\\]
+\\[Y(1+A) = AX \\Rightarrow Y = \\frac{1}{1+\\frac{1}{A}} \\rightarrow X\\] for large A
 
 ![Negative Feedback](/Imperial/ADC/Lec9_1.PNG) 
 
