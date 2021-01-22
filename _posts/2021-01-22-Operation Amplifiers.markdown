@@ -147,7 +147,7 @@ KCL at \\(V_-\\) node: \\(\\frac{0-X_1}{R_1} + \\frac{0-X_2}{R_2} + \\frac{0-X_3
 
 \\(\\Rightarrow Y = - (\\frac{R_F}{R_1}X_1 + \\frac{R_F}{R_2}X_2 + \\frac{R_F}{R_3}X_3)\\)
 
-\\(\\Rightarrow Y = -(8X_1 + 4X_2 + 4X_3))
+\\(\\Rightarrow Y = -(8X_1 + 4X_2 + 4X_3)\\)
 
 Y is a weighted sum of the input voltages with the weight of \\(X_i\\) equal to \\(\\frac{R_F}{R_i} = -G_{i}R_{F}\\).
 
