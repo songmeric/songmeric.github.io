@@ -52,6 +52,5 @@ Nodal analysis is simplified by making some assumptions.
 **Note**: The Op-Amp needs power supply connections which are usually omitted from the schematic; traditionally dual rail(-ve and -ve) supplies were common, but nowadays there are many op-amps requiring only a single supply rail. **The currents out of the Op-Amp only sum to zero(KCL) if the power supply connections are included.**
 
 1. Check for negative feedback: to ensure that an increase in Y makes \\(V_{+} - V_{-}\\) decrease, Y must be connected (usually via other components) to \\(V_{-}\\).
-2. Assume \\(V_{+] = V_{-}\\): Since \\((V_{+} - V_{-}) = \\frac{Y}{A}\\), this is the same as assumping that \\(A \\rightarrow \\infty \\).
-
+2. Assume \\(V_{+] = V_{-}\\) : Since \\((V_{+} - V_{-}) = \\frac{Y}{A}\\), this is the same as assuming that \\(A \\rightarrow \\infty \\).
 
