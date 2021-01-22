@@ -35,7 +35,7 @@ Negative feedback is employed in most op-amp circuits.
 
 In the circuit shown, if the op-amp output Y falls, then \\(V_{-}\\) will fall by the same amount so that \\(V_{+} - V_{-}\\) will increase. This causes Y to rise since:
 
-\\[Y = A(V_{+} - V_{-}) \\\ Y = A(X-Y)\\]
+\\[Y = A(V_{+} - V_{-}) \\newline Y = A(X-Y)\\]
 
 \\[Y(1+A) = AX \\Rightarrow Y = \\frac{1}{1+\\frac{1}{A}} \\rightarrow X\\] for large A
 
