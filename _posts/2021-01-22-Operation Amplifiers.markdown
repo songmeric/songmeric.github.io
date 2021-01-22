@@ -5,7 +5,6 @@ date:   2021-01-22 01:42
 categories: ADC
 
 ---
-<h1>ADC Lecture 9 - Operational Amplifiers</h1>
 
 An op-amp is a circuit with two inputs and one output. 
 
@@ -41,7 +40,7 @@ In the circuit shown, if the op-amp output Y falls, then \\(V_{-}\\) will fall b
 
 \\[Y(1+A) = AX => Y = \\frac{A}{A+1} \\approx X\\] for large A.
 
-![Negative Feedback](/Imperial/ADC/Lec9_1.png) 
+![Negative Feedback](/Imperial/ADC/Lec9_1.PNG) 
 
 Golden Rule : **Negative feedback adjusts the output to make** \\(V_{+} \\approx V_{-}\\)
 
@@ -125,7 +124,7 @@ Although voltage gain is only 1, the power gain is much larger.
 
 **"Inverting Amplifier"** because gain \\(\\frac{Y}{X}\\) is negative. Consequence of X being connected to the \\(V_-\\) Input(via \\(R_1\\)).
 
-Can have any gain =< 0 by choosing the ratio \\(\\frac{R_2}{R_1}\\).
+Can have any gain \\(\\leq\\) 0 by choosing the ratio \\(\\frac{R_2}{R_1}\\).
 
 Negative feedback holds \\(V_-\\) very close to \\(V_+\\).
 
