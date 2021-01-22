@@ -37,7 +37,7 @@ about: 'about.html'
     
     <center><h1>Software Engineering Journey: </h1></center>
     <br>
-    {% for post in site.categories.engineering-roadmap %}
+    {% for post in site.categories.engineering-roadmap limit:3 %}
 
     <article class="post">
         <header class="post-header">
@@ -64,7 +64,7 @@ about: 'about.html'
     <br>    
     <center><h1>Analysis and design of circuits: </h1></center>
     <br>
-    {% for post in site.categories.ADC %}
+    {% for post in site.categories.ADC limit:3 %}
 
     <article class="post">
         <header class="post-header">
