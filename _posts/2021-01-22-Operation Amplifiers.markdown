@@ -6,8 +6,6 @@ categories: ADC
 
 ---
 
-<h1>ADC Lecture 9 - Operational Amplifiers</h1>
-
 An op-amp is a circuit with two inputs and one output. 
 
 It is a **differential** amplifier, which means that the output voltage is 
