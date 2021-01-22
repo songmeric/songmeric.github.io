@@ -81,6 +81,6 @@ Hence,
 
 **Non-inverting amplifier** because the gain \\(\\frac{Y}{X}\\) is positive.
 
-Consequence of X being connected to \\(V_+) input.
+Consequence of X being connected to \\(V_+\\) input.
 
 ![noninv](/Imperial/ADC/Lec9_NonInv.PNG)
