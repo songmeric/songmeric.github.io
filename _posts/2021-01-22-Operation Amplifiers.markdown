@@ -42,7 +42,7 @@ In the circuit shown, if the op-amp output Y falls, then \\(V_{-}\\) will fall b
 
 \\[Y(1+A) = AX => Y = \\frac{A}{A+1} \\approx X\\] for large A.
 
-![Negative Feedback](/Imperial/ADC/Lec9_1.png) 
+![Negative Feedback](/Imperial/ADC/Lec9_1.PNG) 
 
 Golden Rule : **Negative feedback adjusts the output to make** \\(V_{+} \\approx V_{-}\\)
 
