@@ -36,4 +36,4 @@ For example: in a central heating system, if the temperature falls too low the t
 
 Negative feedback is employed in most op-amp circuits.
 
-In the circuit shown, if the op-amp output Y falls, then \\(V_{+}\\) will fall by the same amount
+In the circuit shown, if the op-amp output Y falls, then \\(V_{-}\\) will fall by the same amount
