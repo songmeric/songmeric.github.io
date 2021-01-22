@@ -37,8 +37,6 @@ about: 'about.html'
     
     <center><h1><a href="/roadmap.html" style="text-decoration: none;">Software Engineering Journey: </a></h1></center>
     <br>
-    <center><h5>Click above to view all posts</h5></center>
-    <br>
     {% for post in site.categories.engineering-roadmap limit:3 %}
 
     <article class="post">
@@ -61,8 +59,8 @@ about: 'about.html'
             </time> 
         </footer>
     </article>
-
     {% endfor %} 
+    <center><h5><a href="/roadmap.html" style="text-decoration: none;">View more</a></h5></center>
     <br>    
     <center><h1><a href="adc.html" style="text-decoration: none;">Analysis and Design of Circuits: </a></h1></center>
     <br>
