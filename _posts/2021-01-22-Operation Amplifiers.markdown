@@ -119,7 +119,7 @@ Although voltage gain is only 1, the power gain is much larger.
 ![5](/Imperial/ADC/Lec9_5.PNG)
 
 - Negative feedback OK
-- Since \\(V_+ = 0\\) we much have \\(V_- = 0\\). 
+- Since \\(V_+ = 0\\) we must have \\(V_- = 0\\). 
 - KCL at \\(V_-\\) node: \\(\\frac{0-X}{R_1} + \\frac{0-Y}{R_2} = 0 \\Rightarrow Y = -\\frac{R_2}{R_1}X = -3X\\)
 
 **"Inverting Amplifier"** because gain \\(\\frac{Y}{X}\\) is negative. Consequence of X being connected to the \\(V_-\\) Input(via \\(R_1\\)).
