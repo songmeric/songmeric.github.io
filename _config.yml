@@ -1,12 +1,12 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: IB Engineering
+description: IB 전문 온라인 학원
+meta_description: "Online IB tutoring service"
 
 markdown: kramdown
 highlighter: rouge
 logo: false
 paginate: 15
-domain_name: "http://songmeric.github.io"
+domain_name: "http://ibengineering.kr"
 baseurl: "" # the subpath of your site, e.g. "/blog"
 google_analytics: "UA-XXXXXXXX-X"
 plugins: [jekyll-paginate]
