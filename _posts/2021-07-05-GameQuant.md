@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "JG Statistics MVP."
+title:  "JG Statistics MVP - 1"
 date:   2021-07-05 16:40:00
 categories: gamequant
 
