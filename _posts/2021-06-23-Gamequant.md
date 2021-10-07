@@ -78,7 +78,7 @@ categories: gamequant
         
         ![/images/output_sample_v1.2.gif](/images/output_sample_v1.2.gif)
         
-        ![Daily%20Report%202021%2006%2023%20(Wed)%2013e47bd02d794ef385a05fdfb5ade087/JgPos_v1.1.gif](/images/JgPos_v1.1.gif)
+        ![Daily%20Report%202021%2006%2023%20(Wed)%2013e47bd02d794ef385a05fdfb5ade087/JgPos_v1.1.gif](images/JgPos_v1.1.gif)
         
 
 2. 샘플 영상 추가 및 결과 시각화
