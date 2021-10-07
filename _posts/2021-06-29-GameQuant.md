@@ -1,9 +1,7 @@
-# Daily Report 2021.06.29 (Tue)
-
 ---
 layout: post
-title:  "0629"
-date:   2020-06-29 16:40:00
+title:  "Jg mobs/minions tracking enhancement from minimap"
+date:   2021-06-29 16:40:00
 categories: gamequant
 
 ---
