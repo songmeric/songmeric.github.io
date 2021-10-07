@@ -7,65 +7,65 @@ categories: gamequant
 ---
 
 1. **JgPos v1.4** 개발
-    - 아래의 예시와 같이 JgPos v1.3에서 귀환 모션을 잡아내지 못하는 문제점 발견
-      
-        ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/ezgif.com-gif-maker_(4).gif](/images/0626_4.gif)
-        
-    - 귀환 모션의 경우, 챔피언 아이콘 테두리에 비교적 더 두꺼운 원이 생기는 것을 고려하여 v1.3에서 추가한 **아이콘 주변 테두리를 두껍게 수정**
-      
-        ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/Untitled.png](/images/0626_icon.png)
-        
-    - 아래 시각화 결과와 같이 해당 문제점이 해결된 것을 확인할 수 있다.
-      
-        ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/ezgif.com-gif-maker.gif](/images/0626_1.gif)
-        
-    - 시각화 결과 소환사 아이콘이 굉장히 들쑥날쑥하며 불연속적인 것을 확인할 수 있다. 이를 해결하이 위하여 [scipy.signal.savgol_filter](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.savgol_filter.html)를 이용하여 아래와 같이 **각 좌표에 대한 1D-vector를 smooth하게** 만들어주었다.
-        - 전후 그래프 비교
-        
-        ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/Untitled%201.png](/images/0626_graphs.png)
-        
-        - 결과 시각화
-          
-            ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/ezgif.com-gif-maker_(1).gif](/images/0626_2.gif)
-            
-            ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/ezgif.com-gif-maker_(2).gif](/images/0626_3.gif)
-            
-        - **코드**
-        
-        ```python
-        def smooth_coord(coord, delta_thrs=20, window_length=35, polyorder=3):
-          '''
-          if the delta value (next position - current position) is bigger than delta_thrs,
-          it is considered a point where there has been a sudden change in location. (e.g., teleport)
-          And the smoothing process is adopted for each interval.
-          '''
-          from scipy.signal import savgol_filter
-        
-          coord_delta = np.abs(coord[1:] - coord[:-1])
-          
-          split_idcs = np.where(coord_delta > delta_thrs)[0]+1
-        
-          if len(split_idcs) > 0:
-            coord_split = np.split(coord, split_idcs)
-          else:
-            coord_split = [coord]
-          
-          coord_smooth = []
-          for coord_part in coord_split:
-            n_coord = len(coord_part)
-            if n_coord > window_length:
-              coord_smooth.append(savgol_filter(coord_part, window_length, polyorder))
-            else:
-              coord_smooth.append(coord_part)
-        
-          return np.concatenate(coord_smooth)
-        ```
-    
+- 아래의 예시와 같이 JgPos v1.3에서 귀환 모션을 잡아내지 못하는 문제점 발견
+
+    ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/ezgif.com-gif-maker_(4).gif](/images/0626_4.gif)
+
+- 귀환 모션의 경우, 챔피언 아이콘 테두리에 비교적 더 두꺼운 원이 생기는 것을 고려하여 v1.3에서 추가한 **아이콘 주변 테두리를 두껍게 수정**
+
+    ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/Untitled.png](/images/0626_icon.png)
+
+- 아래 시각화 결과와 같이 해당 문제점이 해결된 것을 확인할 수 있다.
+
+    ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/ezgif.com-gif-maker.gif](/images/0626_1.gif)
+
+- 시각화 결과 소환사 아이콘이 굉장히 들쑥날쑥하며 불연속적인 것을 확인할 수 있다. 이를 해결하이 위하여 [scipy.signal.savgol_filter](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.savgol_filter.html)를 이용하여 아래와 같이 **각 좌표에 대한 1D-vector를 smooth하게** 만들어주었다.
+    - 전후 그래프 비교
+
+    ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/Untitled%201.png](/images/0626_graphs.png)
+
+    - 결과 시각화
+
+        ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/ezgif.com-gif-maker_(1).gif](/images/0626_2.gif)
+
+        ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/ezgif.com-gif-maker_(2).gif](/images/0626_3.gif)
+
+    - **코드**
+
+    ```python
+    def smooth_coord(coord, delta_thrs=20, window_length=35, polyorder=3):
+      '''
+      if the delta value (next position - current position) is bigger than delta_thrs,
+      it is considered a point where there has been a sudden change in location. (e.g., teleport)
+      And the smoothing process is adopted for each interval.
+      '''
+      from scipy.signal import savgol_filter
+
+      coord_delta = np.abs(coord[1:] - coord[:-1])
+
+      split_idcs = np.where(coord_delta > delta_thrs)[0]+1
+
+      if len(split_idcs) > 0:
+        coord_split = np.split(coord, split_idcs)
+      else:
+        coord_split = [coord]
+
+      coord_smooth = []
+      for coord_part in coord_split:
+        n_coord = len(coord_part)
+        if n_coord > window_length:
+          coord_smooth.append(savgol_filter(coord_part, window_length, polyorder))
+        else:
+          coord_smooth.append(coord_part)
+
+      return np.concatenate(coord_smooth)
+    ```
+
 2. **python script 변환**: [main.py](https://drive.google.com/file/d/1-3q3gaQE6LSo1xWiRnfM7nAPjMeE4ADQ/view?usp=sharing)
    
-    ![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/Untitled%202.png](/images/0626_script.png)
-    
-    - argument로 input webm 파일을 지정하면 csv file로 converting해주는 python script 완성
-    - Argument 1. --input: input webm file path (e.g., input.webm)
-    - Argument 2. --output: output csv file save path (e.g., output.csv)
-    - Argument 3. --mp4: call this option if you want mp4 result video file (e.g., output.mp4)
+![Daily%20Report%202021%2006%2026%20(Sat)%20d9542c7b3b204633ade59eafd65693a9/Untitled%202.png](/images/0626_script.png)
+
+- argument로 input webm 파일을 지정하면 csv file로 converting해주는 python script 완성
+- Argument 1. --input: input webm file path (e.g., input.webm)
+- Argument 2. --output: output csv file save path (e.g., output.csv)
+- Argument 3. --mp4: call this option if you want mp4 result video file (e.g., output.mp4)
