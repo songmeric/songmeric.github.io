@@ -76,7 +76,7 @@ categories: gamequant
         - 엉뚱한 곳에 잡히는 경우가 존재하여 false positive를 줄이기 위한 조건 추가 필요
         - 거의 모든 icon이 occlusion되어 시각적으로 확인하기 어려운 경우에는 이전 frame의 정보를 이용하여 해당 frame의 위치를 예측하는 과정 필요
         
-        ![Daily%20Report%202021%2006%2023%20(Wed)%2013e47bd02d794ef385a05fdfb5ade087/output_sample_v1.2.gif](/images/output_sample_v1.2.gif)
+        ![/images/output_sample_v1.2.gif](/images/output_sample_v1.2.gif)
         
         ![Daily%20Report%202021%2006%2023%20(Wed)%2013e47bd02d794ef385a05fdfb5ade087/JgPos_v1.1.gif](/images/JgPos_v1.1.gif)
         
