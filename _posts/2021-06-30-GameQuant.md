@@ -1,26 +1,24 @@
-# Daily Report 2021.06.30 (Wed)
-
 ---
 layout: post
-title:  "0630."
-date:   2020-06-30 16:40:00
+title:  "2021-06-30 Code refactoring"
+date:   2021-06-30 16:40:00
 categories: gamequant
 
 ---
 
 1. **Code Refactoring**
-    - 기존 코드가 jupyter notebook에 너무 난잡하게 짜여져 있어 code refactoring 진행
-    - 정리한 코드 구조
-    - main.py : main code
-    - utils
-    └  io.py : input/output
-    └  champ_tracking.py : functions for champion icon tracking 
-    └  jg_tracking.py : functions for jungle monster tracking 
-    └  minion_tracking.py : functions for minion tracking 
-    └  time_log.py : functions for kill and object log tracking
-    - 정리된 main.py 코드
-      
-        ![Daily%20Report%202021%2006%2030%20(Wed)%207d7e3a2629e444499b2e2ae86c1ca1d2/Untitled.png](/images/0630.png)
+- 기존 코드가 jupyter notebook에 너무 난잡하게 짜여져 있어 code refactoring 진행
+- 정리한 코드 구조
+- main.py : main code
+- utils
+└  io.py : input/output
+└  champ_tracking.py : functions for champion icon tracking 
+└  jg_tracking.py : functions for jungle monster tracking 
+└  minion_tracking.py : functions for minion tracking 
+└  time_log.py : functions for kill and object log tracking
+- 정리된 main.py 코드
+
+    ![Daily%20Report%202021%2006%2030%20(Wed)%207d7e3a2629e444499b2e2ae86c1ca1d2/Untitled.png](/images/0630.png)
     
 2. **Champion icon tracking**
     - 성능 향상보다는 속도 향상 위주로 진행.
