@@ -12,7 +12,7 @@ categories: gamequant
 - 진녹색: 중간에 걸친 라인
 - 초록색: 당기는 라인
 
-    ![Daily%20Report%202021%2007%2008%20(Thu)%2003d84b7fb812460d9e332f734a7cce42/line.png](/image/line.png)
+    ![Daily%20Report%202021%2007%2008%20(Thu)%2003d84b7fb812460d9e332f734a7cce42/line.png](/images/line.png)
 
     ```python
     def get_line_push_map(size):
@@ -44,7 +44,7 @@ categories: gamequant
 - push_df: 각 프레임 당 해당 라인의 챔피언이 라인 상에 어디에 존재하는지를 나타낸 값
 - push_probs: push_df를 바탕으로 각 챔피언이 라인을 어떻게 관리하는지에 대한 확률값 (푸쉬할 확률, 당길 확률, 중간에 걸칠 확률 순서)
 
-    ![Daily%20Report%202021%2007%2008%20(Thu)%2003d84b7fb812460d9e332f734a7cce42/_2021-07-08__7.59.00.png](/image/_2021-07-08__7.59.00.png)
+    ![Daily%20Report%202021%2007%2008%20(Thu)%2003d84b7fb812460d9e332f734a7cce42/_2021-07-08__7.59.00.png](/images/_2021-07-08__7.59.00.png)
 
 - 사용된 코드
 
