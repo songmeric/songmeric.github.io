@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GameQuant Dev Diary: Data collection pipeline - 3"
+title:  "Automated data collection pipeline via frame-by-frame SSIM analysis - 3"
 date:   2021-06-24 16:40:00
 categories: gamequant
 
