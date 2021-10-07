@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Daily Report 2021.06.22 (Tue)"
+title:  "GameQuant Dev Diary: Data pipeline 1"
 date:   2021-06-22 16:40:00
 categories: gamequant
 
