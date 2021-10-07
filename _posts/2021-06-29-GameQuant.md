@@ -7,83 +7,83 @@ categories: gamequant
 ---
 
 1. **정글몹 tracking**
-    1. 이전에 정글몹 아이콘을 이용한 tracking 방법 대체. 정글몹은 미니맵 상에서 고정된 위치에 존재하므로 해당 위치에 정글몹 아이콘이 존재하는지 여부를 바탕으로 tracking
-    2. 각 정글몹별 미니맵 상의 좌표 (수작업으로 구한 값이라 오차가 있을 수 있음.)
-       
-        ```python
-        jg_pos_dict = {
-            # Name : [x_min, y_min, x_max, y_max]
-            'blue_team_gromp' : [27, 93, 31, 97],
-            'blue_team_blue' : [50, 100, 56, 106],
-            'blue_team_wolf' : [51, 122, 55, 126],
-            'blue_team_wraith' : [100, 140, 103, 143],
-            'blue_team_red' : [111, 161, 115, 165],
-            'blue_team_golem' : [119, 178, 123, 182],
-        
-            'red_team_gromp' : [182, 123, 186, 127],
-            'red_team_blue' : [158, 116, 164, 122],
-            'red_team_wolf' : [160, 95, 163, 98],
-            'red_team_wraith' : [110, 77, 113, 80],
-            'red_team_red' : [99, 57, 103, 61],
-            'red_team_golem' : [91, 37, 95, 41],
-        
-            'upper_scuttler' : [61, 77, 64, 80],
-            'lower_scuttler' : [150, 142, 154, 146],
-        
-            'dragon' : [142, 151, 148, 158],
-            'baron' : [67, 63, 74, 70],
-        }
-        ```
-        
-    3. **2**에서 구한 좌표에 정글몹이 존재하는 여부를 확인하는 코드
-    - 정글몹 아이콘에 해당하는 HSV 범위(jg_gen_min_HSV, jg_gen_max_HSV)를 미리 정하고 해당 범위 안에 HSV 값이 들어오는지 여부를 바탕으로 리젠 여부 확인   
-      
-        ```python
-        jg_gen_min_HSV = [10, 90, 90]
-        jg_gen_max_HSV = [26, 220, 200]
-        
-        # For each frame
-        jg_gen_rows = []
-        jg_names = jg_pos_dict.keys()
-        
-        for frame in frames:
-          jg_gen_row = []
-        
-          # Get minimap part from the entire frame
-          minimap = extract_minimap(frame)
-          minimap_clone = minimap.copy()
-        
-          # For each icon which exist in the current game
-          for name in jg_names:
-            x_min, y_min, x_max, y_max = jg_pos_dict[name]
-            jg_region = minimap[y_min:y_max, x_min:x_max].copy()
-            matched_HSV = cv2.cvtColor(cv2.resize(jg_region, (1,1)), cv2.COLOR_BGR2HSV)[0,0].astype(np.float32)
-        
-            is_gen = int(np.all(jg_gen_min_HSV < matched_HSV) & np.all(matched_HSV < jg_gen_max_HSV))
-            jg_gen_row.append(is_gen)
-        
-          jg_gen_rows.append(jg_gen_row)
-        
-        jg_gen_df = pd.DataFrame(jg_gen_rows, columns=jg_names)
-        ```
-        
-    4. 단순히 HSV 값을 바탕으로 정글몹 리젠 여부를 따지면 몇몇 프레임에서 오류가 발생하는 경우 확인. 이를 해결하기 위하여 앞뒤 일정 간격의 프레임을 비교하여 오류라고 판단되는 패턴을 보일 경우, 앞뒤 프레임의 값으로 대체하여 오류 해결. 
-       
-        ```python
-        def replace_weird_values(jg_gen_df):
-          patterns = [[1,0,1], [1,0,0,1], [1,0,0,0,1], [1,0,0,0,0,1], [0,1,0], [0,1,1,0], [0,1,1,1,0], [0,1,1,1,1,0]]
-        
-          for i in range(jg_gen_df.shape[1]):
-            for pattern in patterns:
-              idcs = np.where([np.all(v.values == pattern) for v in jg_gen_df.iloc[:,i].rolling(len(pattern))])[0]
-        
-              for idx in idcs:
-                jg_gen_df.iloc[idx-len(pattern)+1:idx+1,i] = pattern[0]
-        ```
-        
-    5. 위와 같은 방법으로 구현한 정글몹 tracking 결과 시각화 (빨간색: 젠 O / 파란색: 젠 X)
-       
-        ![Daily%20Report%202021%2006%2029%20(Tue)%205c8d12253eb74f109ec58e632183ab2a/ezgif.com-gif-maker.gif](/images/0629_gif_0.gif)
+1. 이전에 정글몹 아이콘을 이용한 tracking 방법 대체. 정글몹은 미니맵 상에서 고정된 위치에 존재하므로 해당 위치에 정글몹 아이콘이 존재하는지 여부를 바탕으로 tracking
+2. 각 정글몹별 미니맵 상의 좌표 (수작업으로 구한 값이라 오차가 있을 수 있음.)
+
+    ```python
+    jg_pos_dict = {
+        # Name : [x_min, y_min, x_max, y_max]
+        'blue_team_gromp' : [27, 93, 31, 97],
+        'blue_team_blue' : [50, 100, 56, 106],
+        'blue_team_wolf' : [51, 122, 55, 126],
+        'blue_team_wraith' : [100, 140, 103, 143],
+        'blue_team_red' : [111, 161, 115, 165],
+        'blue_team_golem' : [119, 178, 123, 182],
+
+        'red_team_gromp' : [182, 123, 186, 127],
+        'red_team_blue' : [158, 116, 164, 122],
+        'red_team_wolf' : [160, 95, 163, 98],
+        'red_team_wraith' : [110, 77, 113, 80],
+        'red_team_red' : [99, 57, 103, 61],
+        'red_team_golem' : [91, 37, 95, 41],
+
+        'upper_scuttler' : [61, 77, 64, 80],
+        'lower_scuttler' : [150, 142, 154, 146],
+
+        'dragon' : [142, 151, 148, 158],
+        'baron' : [67, 63, 74, 70],
+    }
+    ```
+
+3. **2**에서 구한 좌표에 정글몹이 존재하는 여부를 확인하는 코드
+- 정글몹 아이콘에 해당하는 HSV 범위(jg_gen_min_HSV, jg_gen_max_HSV)를 미리 정하고 해당 범위 안에 HSV 값이 들어오는지 여부를 바탕으로 리젠 여부 확인   
+
+    ```python
+    jg_gen_min_HSV = [10, 90, 90]
+    jg_gen_max_HSV = [26, 220, 200]
+
+    # For each frame
+    jg_gen_rows = []
+    jg_names = jg_pos_dict.keys()
+
+    for frame in frames:
+      jg_gen_row = []
+
+      # Get minimap part from the entire frame
+      minimap = extract_minimap(frame)
+      minimap_clone = minimap.copy()
+
+      # For each icon which exist in the current game
+      for name in jg_names:
+        x_min, y_min, x_max, y_max = jg_pos_dict[name]
+        jg_region = minimap[y_min:y_max, x_min:x_max].copy()
+        matched_HSV = cv2.cvtColor(cv2.resize(jg_region, (1,1)), cv2.COLOR_BGR2HSV)[0,0].astype(np.float32)
+
+        is_gen = int(np.all(jg_gen_min_HSV < matched_HSV) & np.all(matched_HSV < jg_gen_max_HSV))
+        jg_gen_row.append(is_gen)
+
+      jg_gen_rows.append(jg_gen_row)
+
+    jg_gen_df = pd.DataFrame(jg_gen_rows, columns=jg_names)
+    ```
+
+4. 단순히 HSV 값을 바탕으로 정글몹 리젠 여부를 따지면 몇몇 프레임에서 오류가 발생하는 경우 확인. 이를 해결하기 위하여 앞뒤 일정 간격의 프레임을 비교하여 오류라고 판단되는 패턴을 보일 경우, 앞뒤 프레임의 값으로 대체하여 오류 해결. 
+
+    ```python
+    def replace_weird_values(jg_gen_df):
+      patterns = [[1,0,1], [1,0,0,1], [1,0,0,0,1], [1,0,0,0,0,1], [0,1,0], [0,1,1,0], [0,1,1,1,0], [0,1,1,1,1,0]]
+
+      for i in range(jg_gen_df.shape[1]):
+        for pattern in patterns:
+          idcs = np.where([np.all(v.values == pattern) for v in jg_gen_df.iloc[:,i].rolling(len(pattern))])[0]
+
+          for idx in idcs:
+            jg_gen_df.iloc[idx-len(pattern)+1:idx+1,i] = pattern[0]
+    ```
+
+5. 위와 같은 방법으로 구현한 정글몹 tracking 결과 시각화 (빨간색: 젠 O / 파란색: 젠 X)
+
+    ![Daily%20Report%202021%2006%2029%20(Tue)%205c8d12253eb74f109ec58e632183ab2a/ezgif.com-gif-maker.gif](/images/0629_gif_0.gif)
     
 2. **미니언 tracking**
    
