@@ -100,4 +100,4 @@ categories: gamequant
     
     - **결과 시각화**
       
-        ![/_posts/images/JgPos_v1.1.gif](/_posts/images/JgPos_v1.1.gif)
+        ![/_posts/images/JgPos_v1.1.gif](/images/JgPos_v1.1.gif)
