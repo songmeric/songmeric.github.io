@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Daily Report 2021.06.22 (Tue)"
-date:   2020-06-22 16:40:00
+date:   2021-06-22 16:40:00
 categories: gamequant
 
 ---
