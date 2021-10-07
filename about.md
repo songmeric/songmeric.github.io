@@ -8,4 +8,4 @@ I am studying **Electronic and Information Engineering (Equivalent of CSE)** at 
 
 I have co-founded an AI Startup, [**Assonant**](https://www.assonant.ai) with my fellow mathematicians from [**SNU**](https://snu.ac.kr). 
 
-We are concurrently working on mathematical models for the government-run [**K-TOTO**](https://www.sportstoto.co.kr/) Esports bookmaking, and **GameQuant**; a platform aiming to maximize users' winrate by providing **actionable intelligence by artificial intelligence**.
+We are concurrently working on mathematical models for the government-run [**K-TOTO**](https://www.sportstoto.co.kr/) Esports bookmaking, and **GameQuant**; a platform aiming to maximize users' winrate by providing **actionable intelligence through artificial intelligence**.
