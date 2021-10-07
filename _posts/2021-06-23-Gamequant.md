@@ -1,9 +1,7 @@
-# Daily Report 2021.06.23 (Wed)
-
 ---
 layout: post
 title:  "0623."
-date:   2020-06-23 16:40:00
+date:   2021-06-23 16:40:00
 categories: gamequant
 
 ---
