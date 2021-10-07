@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Automated data collection pipeline"
+title:  "Automated data collection pipeline (Swagger, ffmpeg, HTTPrequests)"
 date:   2021-10-01 16:40:00
 categories: gamequant
 
