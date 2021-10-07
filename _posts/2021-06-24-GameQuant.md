@@ -11,7 +11,7 @@ categories: gamequant
 - **JgPos v1.2**이 예측하지 못한 프레임의 경우, 별도의 방법(e.g., 전후의 프레임 정보 활용)을 이용하여 해당 프레임에 누락된 챔피언의 위치를 기입할 예정
 - JgPos v1.2 기반 **샘플 csv 데이터셋** ([링크](https://drive.google.com/file/d/1--vd_Q-Pi_Y6OzAwr8w0y21HC7xAXDzX/view?usp=sharing))
 
-    ![Daily%20Report%202021%2006%2024%20(Thu)%204b8d5618d651402fa8be585835aad7d4/_2021-06-24__10.57.31.png](/images/_2021-06-24__10.57.31.png)
+    ![Daily%20Report%202021%2006%2024%20(Thu)%204b8d5618d651402fa8be585835aad7d4/_2021-06-24__10.57.31.png](/images/2021-06-24__10.57.31.png)
 
 - 단순히 누락된 프레임을 가장 가까운 앞뒤의 프레임에 존재하는 해당 챔피언의 위치 값의 평균 (linear interpolation)으로 대체한 결과 시각화
     - 루시안이 텔레포트를 사용하는 경우를 기존 모델에서는 잡아내지 못하였으나 보완된 모습
