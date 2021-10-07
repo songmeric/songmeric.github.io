@@ -1,9 +1,7 @@
-# Daily Report 2021.07.05 (Mon)
-
 ---
 layout: post
-title:  "0705."
-date:   2020-07-05 16:40:00
+title:  "JG Statistics MVP."
+date:   2021-07-05 16:40:00
 categories: gamequant
 
 ---
