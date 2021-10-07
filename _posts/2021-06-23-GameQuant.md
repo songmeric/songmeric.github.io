@@ -12,7 +12,7 @@ categories: gamequant
     - **Portion matching**: occlusion된 경우를 고려하여 전체 icon 중 일부만 crop하여 matching
     - **HSV difference**: 단순히 SSIM만 고려하였을 때, 협곡의 지형과 챔피언 아이콘의 모양이 유사하여 매칭되는 경우가 있어 매칭된 영역과 챔피언 아이콘 사이의 HSV값을 추가적으로 비교
     
-    
+   </br>
     ```python
     		# Get minimap part from the entire frame
         minimap = frame[map_y_min:map_y_max, map_x_min:map_x_max]
