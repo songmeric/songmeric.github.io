@@ -1,9 +1,7 @@
-# Daily Report 2021.06.27 (Sun)
-
 ---
 layout: post
-title:  "0627."
-date:   2020-06-27 16:40:00
+title:  "Timeline video analysis of LoL replay - 1"
+date:   2021-06-27 16:40:00
 categories: gamequant
 
 ---
