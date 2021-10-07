@@ -6,7 +6,7 @@ I am an Engineer, who is heavily interested in **data-driven** methods of decisi
 
 I am studying **Electronic and Information Engineering (Equivalent of CSE)** at [**Imperial College London**](https://imperial.ac.uk). 
 
-I have co-founded an AI Startup, [**Assonant**](https://www.assonant.ai) with my fellow mathematicians at [**SNU**](https://snu.ac.kr). 
+I am the founder and CEO of [**Assonant**](https://www.assonant.ai).
 
 We are concurrently working on:
 
