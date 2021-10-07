@@ -100,4 +100,4 @@ categories: gamequant
     
     - **결과 시각화**
       
-        ![Daily%20Report%202021%2006%2022%20(Tue)%20e67021740de945c19d805282a8335e23/JgPos_v1.1.gif](/images/JgPos_v1.1.gif)
+        ![Daily%20Report%202021%2006%2022%20(Tue)%20e67021740de945c19d805282a8335e23/JgPos_v1.1.gif](images/JgPos_v1.1.gif)
