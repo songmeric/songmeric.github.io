@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2021-07-06 JG Statistics enhancements"
-date:   2020-07.06 16:40:00
+date:   2021-07.06 16:40:00
 categories: gamequant
 
 ---
