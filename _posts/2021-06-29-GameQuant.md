@@ -7,8 +7,8 @@ categories: gamequant
 ---
 
 1. **정글몹 tracking**
-1. 이전에 정글몹 아이콘을 이용한 tracking 방법 대체. 정글몹은 미니맵 상에서 고정된 위치에 존재하므로 해당 위치에 정글몹 아이콘이 존재하는지 여부를 바탕으로 tracking
-2. 각 정글몹별 미니맵 상의 좌표 (수작업으로 구한 값이라 오차가 있을 수 있음.)
+* 이전에 정글몹 아이콘을 이용한 tracking 방법 대체. 정글몹은 미니맵 상에서 고정된 위치에 존재하므로 해당 위치에 정글몹 아이콘이 존재하는지 여부를 바탕으로 tracking
+* 각 정글몹별 미니맵 상의 좌표 (수작업으로 구한 값이라 오차가 있을 수 있음.)
 
     ```python
     jg_pos_dict = {
@@ -35,7 +35,7 @@ categories: gamequant
     }
     ```
 
-3. **2**에서 구한 좌표에 정글몹이 존재하는 여부를 확인하는 코드
+* 위에서 구한 좌표에 정글몹이 존재하는 여부를 확인하는 코드
 - 정글몹 아이콘에 해당하는 HSV 범위(jg_gen_min_HSV, jg_gen_max_HSV)를 미리 정하고 해당 범위 안에 HSV 값이 들어오는지 여부를 바탕으로 리젠 여부 확인   
 
     ```python
@@ -67,7 +67,7 @@ categories: gamequant
     jg_gen_df = pd.DataFrame(jg_gen_rows, columns=jg_names)
     ```
 
-4. 단순히 HSV 값을 바탕으로 정글몹 리젠 여부를 따지면 몇몇 프레임에서 오류가 발생하는 경우 확인. 이를 해결하기 위하여 앞뒤 일정 간격의 프레임을 비교하여 오류라고 판단되는 패턴을 보일 경우, 앞뒤 프레임의 값으로 대체하여 오류 해결. 
+* 단순히 HSV 값을 바탕으로 정글몹 리젠 여부를 따지면 몇몇 프레임에서 오류가 발생하는 경우 확인. 이를 해결하기 위하여 앞뒤 일정 간격의 프레임을 비교하여 오류라고 판단되는 패턴을 보일 경우, 앞뒤 프레임의 값으로 대체하여 오류 해결. 
 
     ```python
     def replace_weird_values(jg_gen_df):
@@ -81,7 +81,7 @@ categories: gamequant
             jg_gen_df.iloc[idx-len(pattern)+1:idx+1,i] = pattern[0]
     ```
 
-5. 위와 같은 방법으로 구현한 정글몹 tracking 결과 시각화 (빨간색: 젠 O / 파란색: 젠 X)
+* 위와 같은 방법으로 구현한 정글몹 tracking 결과 시각화 (빨간색: 젠 O / 파란색: 젠 X)
 
     ![Daily%20Report%202021%2006%2029%20(Tue)%205c8d12253eb74f109ec58e632183ab2a/ezgif.com-gif-maker.gif](/images/0629_gif_0.gif)
     
