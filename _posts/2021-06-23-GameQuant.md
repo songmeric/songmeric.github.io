@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "0623."
+title:  "GameQuant Dev Diary: Data collection pipeline - 2"
 date:   2021-06-23 16:40:00
 categories: gamequant
 
