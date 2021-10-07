@@ -83,6 +83,6 @@ categories: gamequant
 
 2. 샘플 영상 추가 및 결과 시각화
 
-![Daily%20Report%202021%2006%2023%20(Wed)%2013e47bd02d794ef385a05fdfb5ade087/output_sample2_v1.2.gif](images/output_sample2_v1.2.gif)
+- ![Daily%20Report%202021%2006%2023%20(Wed)%2013e47bd02d794ef385a05fdfb5ade087/output_sample2_v1.2.gif](images/output_sample2_v1.2.gif)
 
 3. 확률모델 학습을 위한 csv 파일 출력은 성능이 어느정도 개선되면 진행할 예정.
