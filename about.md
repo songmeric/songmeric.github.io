@@ -8,7 +8,6 @@ I am studying **Electronic and Information Engineering (Equivalent of CSE)** at 
 
 I am the founder and CEO of [**Assonant**](https://www.assonant.ai).
 
-We are concurrently working on:
+We are currently working on:
 
-1. Mathematical models for the government-owned [**K-TOTO**](https://www.sportstoto.co.kr/) Esports bookmaking.
-2. **GameQuant**; a platform aiming to maximize users' winrate by providing **actionable intelligence through artificial intelligence**.
+**GameQuant**; a platform aiming to maximize users' winrate by providing **actionable intelligence through artificial intelligence**.
