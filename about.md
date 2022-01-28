@@ -10,4 +10,4 @@ I am the founder and CEO of [**Assonant**](https://www.assonant.ai).
 
 We are currently working on:
 
-**GameQuant**; a platform aiming to maximize users' winrate by providing **actionable intelligence through artificial intelligence**.
+**drills.gg**, a platform designed to provided various drills to enhance MOBA-genre esports players' cognitive/mechanical skills.
