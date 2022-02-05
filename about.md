@@ -10,6 +10,6 @@ I am the founder and CEO of [**Assonant**](https://www.assonant.ai). At Assonant
 
 Worked on:-
 
-**GameQuant**, Pick-and-Ban recommendation system based on non-cooperative game theory and over 1TB of game history data.
+**GameQuant**, Pick-and-Ban recommendation system based on non-cooperative game theory and over 1TB of plain text game history data.
 
 **drills.gg**, training platform that provides drills for enhancing core cognitive/mechanical skillset of MOBA-genre esports players.
