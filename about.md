@@ -6,8 +6,10 @@ I am an Engineer, who is heavily interested in **data-driven** methods of decisi
 
 I am studying **Electronic and Information Engineering (Equivalent of CSE)** at [**Imperial College London**](https://imperial.ac.uk). 
 
-I am the founder and CEO of [**Assonant**](https://www.assonant.ai).
+I am the founder and CEO of [**Assonant**](https://www.assonant.ai). At Assonant, we are trying to revolutionize ESports through data-driven products.
 
-We are currently working on:
+Worked on:-
 
-**drills.gg**, a platform designed to provided various drills to enhance MOBA-genre esports players' cognitive/mechanical skills.
+**GameQuant**, Pick-and-Ban recommendation system based on non-cooperative game theory and over 1TB of game history data.
+
+**drills.gg**, training platform that provides drills for enhancing core cognitive/mechanical skillset of MOBA-genre esports players.
